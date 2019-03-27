@@ -56,7 +56,7 @@ yum install git
 # go to /var/www and from there 
 cd /var/www/
 
-git clone https://github.com/iFixtechLLC/mVMS
+git clone https://github.com/iFixtechLLC/mVMS-new
 
 nano /var/www/mVMS/config/database.yml
 
