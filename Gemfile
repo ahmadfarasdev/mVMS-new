@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'dotenv'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record
@@ -59,7 +59,7 @@ gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 
 
-gem 'dotenv'
+
 gem 'activerecord-session_store', '~> 1.0'
 
 
