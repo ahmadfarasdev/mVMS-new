@@ -35,7 +35,14 @@
       <p><span id="capture_person_msg"></span></p>
     </div>
   </div>
-  <div class="row" hidden>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-10">     
+            <%- if devise_mapping.omniauthable? %>
+            <%- resource_class.omniauth_providers.each do |provider| %>
+              <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+            <% end -%>
+            <% end -%>
+          </div>
     <div class="col-xs-12">
       <input type="text" class="form-control" id="person_id" name="person_id" readonly>
     </div>

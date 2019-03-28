@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'setup/index'
   match '/setup', to: 'setup#index', via: [:get, :post]
 
+
   resources :people
   get 'admin', to: 'visitor_log#index'
   get 'visitor_log/index'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   resources :companies
   resources :reasons
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth' }
   resources :employees, path: :persons, except: [:edit] do
     member do
       get 'log_in'
