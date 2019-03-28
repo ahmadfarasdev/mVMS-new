@@ -63,6 +63,7 @@ gem 'omniauth-google-oauth2', '~> 0.4.1'
 gem 'omniauth-twitter', '~> 1.2', '>= 1.2.1'
 # Use Omniauth linkedin plugin
 gem 'omniauth-linkedin-oauth2'
+gem "omniauth-office365", github: 'jcarbo/omniauth-office365'
 gem "mysql2"
 gem "jpeg_camera", "~> 1.3.2"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -80,3 +81,5 @@ gem 'carrierwave'
 gem 'prawn-rails'
 gem 'prawn-table'
 gem 'prawn-print'
+# Environment variables
+gem 'figaro'
