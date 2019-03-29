@@ -283,6 +283,6 @@ Devise.setup do |config|
   config.omniauth :linkedin, ENV['LINKEDIN_KEY'],ENV['LINKEDIN_SECRET']
   config.omniauth :facebook, ENV['FACEBOOK_KEY'],ENV['FACEBOOK_SECRET']
   config.omniauth :twitter, ENV['TWITTER_KEY'],ENV['TWITTER_SECRET']
-  config.omniauth :office365, ENV['OFFICE365_KEY'],ENV['OFFICE365_SECRET']
+  config.omniauth :office365, ENV['OFFICE365_KEY'],ENV['OFFICE365_SECRET'], :scope => 'https://outlook.office.com/mail.read'
   config.omniauth :google_oauth2, ENV['GOOGLE_KEY'],ENV['GOOGLE_SECRET']
 end
