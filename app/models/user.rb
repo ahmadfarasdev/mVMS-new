@@ -43,7 +43,7 @@ class User < ApplicationRecord
   end
   
   def self.get_user(auth)
-    unscoped.where(provider: auth.provider, uid: auth.uid).or(User.unscoped.where(email: auth.info.email || "#{auth.uid}@#{auth.provider}.com")).first
+    unscoped.where(provider: auth.provider, uid: auth.uid,admin: true).or(User.unscoped.where(email: auth.info.email || "#{auth.uid}@#{auth.provider}.com",admin: true)).first
   end
 
   def self.current=(user)
